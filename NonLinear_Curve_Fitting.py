@@ -23,8 +23,7 @@ def HiddenLayer(inputs, in_size, out_size, activation_function=None):
         outputs = activation_function(Wx_plus_b)
     return outputs
 
-# Make up some real data
-
+# This is some Predefined Variables
 row_size = 500
 col_size = 1
 NoisePw  = 10
