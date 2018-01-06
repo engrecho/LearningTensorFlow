@@ -17,3 +17,4 @@ deploy_key_rsa
 .DBStore/*
 .idea/*
 __pycache__/*
+venv/*
