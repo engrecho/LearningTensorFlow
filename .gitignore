@@ -18,3 +18,7 @@ deploy_key_rsa
 .idea/*
 __pycache__/*
 venv/*
+
+*/__pycache__/*
+
+CNN_learning/3_cifar10/cifar_img_data/*
