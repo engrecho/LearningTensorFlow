@@ -13,8 +13,6 @@ TRAINING_STEPS = 6000
 MOVING_AVERAGE_DECAY = 0.99
 
 
-
-
 def train(mnist):
     # 定义输出为4维矩阵的placeholder
     x = tf.placeholder(tf.float32, [
@@ -59,10 +57,10 @@ def train(mnist):
                 LeNet5_infernece.NUM_CHANNELS))
             _, loss_value, step = sess.run([train_op, loss, global_step], feed_dict={x: reshaped_xs, y_: ys})
 
-            if i % 100 == 0:
+            if i % 50 == 0:  #训练的时间比较长
                 print("After %d training step(s), loss on training batch is %g." % (step, loss_value))
 
-def main(argv=None):
+def main():
     mnist = input_data.read_data_sets("../../MNIST_learning/MNIST_data", one_hot=True)
     train(mnist)
 

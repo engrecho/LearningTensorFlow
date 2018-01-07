@@ -15,6 +15,8 @@ CONV2_SIZE = 5
 
 FC_SIZE = 512
 
+# LeNet5 的中间结构
+
 def inference(input_tensor, train, regularizer):
     with tf.variable_scope('layer1-conv1'):
         conv1_weights = tf.get_variable(
