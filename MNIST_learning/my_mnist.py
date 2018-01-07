@@ -3,10 +3,12 @@
 Please note, this code is only for python 3+. If you are using python 2+, please modify the code accordingly.
 """
 from __future__ import print_function
-import tensorflow as tf
-from tensorflow.examples.tutorials.mnist import input_data
+
 import mnist2image
 import numpy as np
+import tensorflow as tf
+from tensorflow.examples.tutorials.mnist import input_data
+
 # number 1 to 10 data
 mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
 BATCH = 100

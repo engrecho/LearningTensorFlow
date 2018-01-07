@@ -24,7 +24,7 @@ W = np.array([
      [[0,1,2]]]
     ])
 
-# W.shape = (3, 1, 2, 2)
+# W.shape = (2, 2, 1, 3)
 # W[:,:,0,0] = [[1, 4],[7, 0]]
 # W[:,:,0,1] = [[2, 5],[8, 1]]
 # W[:,:,0,2] = [[3, 6],[9, 2]]
@@ -36,7 +36,7 @@ filter_weight = tf.get_variable('weights', [2, 2, 1, LEVEL], initializer = tf.co
 biases = tf.get_variable('biases', [LEVEL], initializer = tf.constant_initializer(0))
 
 M = np.asarray(M, dtype='float32')
-M = M.reshape(1, 3, 3, 1)
+
 
 x = tf.placeholder('float32', [1, None, None, 1])
 conv = tf.nn.conv2d(x, filter_weight, strides=[1, 1, 1, 1], padding='SAME')
